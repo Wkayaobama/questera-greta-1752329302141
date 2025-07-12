@@ -3,6 +3,7 @@ import ArtisticDivider from '../components/ArtisticDivider';
 import { motion } from 'framer-motion';
 import CalligraphyText from '../components/CalligraphyText';
 import NewsletterForm from '../components/NewsletterForm';
+import CountdownTimer from '../components/CountdownTimer';
 
 const Home = () => {
   return (
@@ -13,7 +14,6 @@ const Home = () => {
         subtitle="Une passerelle entre les époques"
       />
       
-      {/* Rest of the component remains exactly the same */}
       <div className="max-w-7xl mx-auto px-4 py-12">
         <motion.div 
           initial={{ opacity: 0 }}
@@ -21,14 +21,18 @@ const Home = () => {
           transition={{ duration: 1.2, delay: 0.3 }}
           className="text-center"
         >
+          <div className="text-right mb-4 italic text-sm text-gray-400">
+            Signed and Dated by Christo
+          </div>
           <CalligraphyText 
             text="Le Pont Neuf était une prouesse technique inaugurée en 1602, le premier pont pour traverser la Seine et relier les rives droite et gauche. Aujourd'hui c'est la passerelle de l'Atelier du Temps qui unit les technologies des 19e, 20e et 21e siècle."
           />
         </motion.div>
-        <div className="text-right mt-4 italic text-sm text-gray-400">
-          Signed and Dated by Christo
-        </div>
       </div>
+      
+      <ArtisticDivider />
+
+      <CountdownTimer />
       
       <ArtisticDivider />
       
